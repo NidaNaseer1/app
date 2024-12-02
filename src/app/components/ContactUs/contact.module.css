@@ -1,0 +1,162 @@
+/* General styling for the Contact Us page container */
+.contactpage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Headings styling */
+ .heading {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .subheading {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph and link styling */
+  .text {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .link {
+    color: black;
+   text-decoration: none;
+    /* text-decoration: underline; */
+    margin-left: 20px;
+  }
+  
+  
+ 
+ 
+  
+  /* Customer support section */
+  .supportinfo {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .support-info p {
+    font-size: 1rem;
+  }
+  
+  .support-info a {
+    font-weight: bold;
+  }
+  
+  /* Social media links styling */
+  .socialmedia {
+    margin-top: 40px;
+  }
+  
+  .social-media a {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    margin-top: 40px;
+  }
+  
+  .faq p {
+    font-size: 1rem;
+  }
+  
+  .faq strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  /* General styling for the Contact Us page container */
+.contactpage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Headings styling */
+ .heading {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .subheading {
+    color: #333;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  
+  /* Paragraph and link styling */
+  .text {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .link {
+    color: black;
+   text-decoration: none;
+    /* text-decoration: underline; */
+    margin-left: 20px;
+  }
+  
+  
+ 
+ 
+  
+  /* Customer support section */
+  .supportinfo {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .support-info p {
+    font-size: 1rem;
+  }
+  
+  .support-info a {
+    font-weight: bold;
+  }
+  
+  /* Social media links styling */
+  .socialmedia {
+    margin-top: 40px;
+  }
+  
+  .social-media a {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  /* FAQ Section */
+  .faq {
+    margin-top: 40px;
+  }
+  
+  .faq p {
+    font-size: 1rem;
+  }
+  
+  .faq strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
