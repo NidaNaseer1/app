@@ -1,25 +1,37 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import React, { useEffect, useState } from "react";
-// import style from "productCard.module.css";
+import React, { useState } from "react";
 import style from "./productCard.module.css";
 
-export default function Productcard(props: any) {
-  const [selectedProduct, setSelectedProduct] = useState([]);
+interface Product {
+  id: number;
+  title: string;
+  image: string;
+  category: string;
+  price: number;
+}
+
+interface ProductCardProps {
+  product?: Product; // `product` can be undefined to handle edge cases
+}
+
+export default function Productcard(props: ProductCardProps) {
+  const [selectedProduct, setSelectedProduct] = useState<Product[]>([]);
   const prod = props.product;
 
   const addToCart = () => {
-    // Store product in localStorage for simplicity or use global state (Zustand/Redux)
-    const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
-    const updatedCart = [...existingCart, prod];
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+    if (prod) {
+      // Store product in localStorage for simplicity or use global state (Zustand/Redux)
+      const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
+      const updatedCart = [...existingCart, prod];
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
 
-    // Navigate to cart page
-    // router.push("/cart");
+      // Navigate to cart page
+      const router = useRouter();
+      router.push("/cart");
+    }
   };
-
-  const router = useRouter();
 
   function modifiedProductTitle(title: string) {
     const titleLength = 22;
@@ -29,13 +41,18 @@ export default function Productcard(props: any) {
     return title;
   }
 
+  if (!prod) {
+    // Render a fallback UI when `product` is not available
+    return <div>Product data is unavailable</div>;
+  }
+
   return (
     <div className={style.body}>
       <div>
-        <Link href={"/Product/" + prod.id} style={{ color: "black", textDecorationLine: "none" }}>
+        <Link href={`/Product/${prod.id}`} style={{ color: "black", textDecoration: "none" }}>
           <div>
             <div className={style.image}>
-              <img src={prod.image} height={150}  />
+              <img src={prod.image} alt={prod.title} height={150} />
             </div>
             <div className={style.title}>{modifiedProductTitle(prod.title)}</div>
             <div className={style.category}>{prod.category}</div>
